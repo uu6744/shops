@@ -1,0 +1,258 @@
+/*搜索框*/
+.container-fluid {
+    margin-left:15px;
+    margin-right:15px;
+    background: #ECF0F5;
+}
+body{
+    background: #f9fafc;
+}
+.content{
+    padding: 10px 10px 100px 10px;
+    position: relative;
+}
+.gys{
+    float:left;
+    margin-right:20px;
+    line-height: 34px;
+}
+
+.gyss{
+    float:left;
+    margin-right:20px;
+    line-height: 34px;
+}
+.col-lg-3 .input-group{
+    /*float:left;*/
+}
+
+.gys i{
+    color:red;
+    font-style: normal;
+}
+.gyss i{
+    color:red;
+    font-style: normal;
+}
+.input-group-btn{
+    position: static;
+}
+
+.dropdown-menu{
+    min-width:100%;
+}
+.modal-header .dropdown-menu{
+    padding: 10px;
+    width: 200px;
+}
+.modal-header .dropdown-menu li:hover{
+    color:#265A88;
+}
+.modal-header .dropdown-menu li{
+    line-height: 30px;
+    cursor: pointer;
+}
+/*表格*/
+.table{
+    margin:30px 0;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    border-bottom: 0;
+}
+.table>thead tr th:first-child,.table>tbody tr td:first-child{
+    border-left:none;
+}
+.table thead{
+    background: #ECF0F5;
+}
+.table>thead tr th:last-child,.table>tbody tr td:first-child{
+    border-right:none;
+}
+.table>thead>tr>th{
+    color: #576b7e;
+    height: 50px;
+    padding: 6px;
+    background: #eef1f9;
+    line-height: 50px;
+}
+.table>tbody>tr>td{
+    line-height: 50px;
+    padding: 0;
+    height:50px;
+    /*vertical-align: middle;*/
+}
+.row:after, .row:before{
+    content: normal;
+}
+.ant-input-number-input {
+    width: 100%;
+    text-align: left;
+    outline: 0;
+    -moz-appearance: textfield;
+    height: 32px;
+    transition: all .3s linear;
+    color: #415161;
+    background-color: #fff;
+    border:1px solid #CDD9E6;
+    border-radius: 3px;
+    padding: 0 7px;
+}
+.cgs{
+    padding: 0 10px;
+}
+.ant-select-more input{
+    padding: 0 10px;
+    border:0;
+    width:100%;
+}
+.autocomplete-column{
+    position: relative;
+}
+.modalBtn{
+    position: absolute;
+    right:8px;
+    top:20px;
+    background: #fff;
+    height:20px;
+}
+.glyphicon-option-horizontal{
+    position: absolute;
+    right:8px;
+    top:20px;
+    cursor: pointer;
+}
+/*footer*/
+.fixed {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: hsla(0,0%,100%,.9);
+    padding: 8px 20px;
+    text-align: center;
+}
+.fixed:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: 1px auto;
+    background-image: url(../images/line.png);
+}
+.fixed .btn{
+    padding: 6px 20px;
+}
+/*弹出模态框*/
+.modal-dialog{
+    margin:120px auto;
+    width:80%;
+}
+.modal-title,.modal-header .input-group{
+    float: left;
+}
+.dropdown{
+    float: left;
+    margin:0 30px;
+}
+.modal-footer{
+    text-align: left;
+}
+.modal-footer button{
+    margin-right:30px;
+    padding: 6px 20px;
+}
+.modal-content .modal-body th{
+    padding: 0;
+}
+.pagination{
+    margin:0;
+}
+.modal-dialog .table>tbody>tr>td{
+    border-bottom: 1px solid #ddd;
+    border-top:none;
+}
+.gsy-search{
+    position: relative;
+}
+.gsys-search{
+    position: relative;
+}
+.input-search{
+    position: absolute;
+    left:0px;
+    top:0px;
+    background: transparent;
+    border:none;
+    width:100%;
+    height:100%;
+    padding-left: 12px;
+}
+
+.input-searchs{
+    position: absolute;
+    left:0px;
+    top:0px;
+    background: transparent;
+    border:none;
+    width:100%;
+    height:100%;
+    padding-left: 12px;
+}
+/*.input-search:focus{*/
+    /*border:2px solid #fff;*/
+/*}*/
+
+.select-more{
+    position: relative;
+}
+.selectList{
+    position: absolute;
+    top:50px;
+    left:0;
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    width:100%;
+    padding-left:0px;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+    height:380px;
+    overflow:auto
+}
+.selectList li{
+    list-style: none;
+    line-height: 38px;
+    padding-left:15px;
+    cursor: pointer;
+}
+.selectList li:hover{
+    background: #EEF1F9;
+    color:#265A88;
+}
+.select-more,.glyphicon-plus,.glyphicon-minus{
+    cursor: pointer;
+}
+.content-wrapper{
+    background:none;
+    height:100%;
+}
+.main-footer{
+    background:  #f9fafc;
+}
+.skin-blue-light, .main-footer {
+    border-top: none;
+}
+.cgs{
+    position: relative;
+}
+.cw{
+    position: absolute;
+    top:0;
+    left:123px;
+    font-size: 12px;
+    color:red;
+}
