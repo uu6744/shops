@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 
 Route::get('/',function(){
-    echo 22;
+    echo 33;
 });
 Route::prefix('admin')->group(function () {
     Route::post('/add','Admin\ZadminController@add');
