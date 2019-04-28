@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/wx', function () {
     return view('index');
 });
 Route::post('/test', 'TestController@edit');
