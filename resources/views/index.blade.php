@@ -1,80 +1,60 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <title>echart学习</title>
+        <script src="/js/echarts.common.min.js"></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            // var chart = echarts.init(dom, 'light');
 
+            //参数一：dom; 参数二：内置主题    light ,dark
+            var myChart = echarts.init(document.getElementById('main'),'dark');
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel77
-                </div>
+            //loading 加载动画
+            myChart.hideLoading();               
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'ECharts 入门示例',
+                    position:'center',
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                //鼠标悬浮到图形元素上设置（高亮）
+                emphasis: {
+                    itemStyle: {
+                        // 高亮时点的颜色。
+                        color: 'blue'
+                    },
+                    label: {
+                        show: true,
+                        // 高亮时标签的文字。
+                        formatter: 'This is a emphasis label.'
+                    }
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }]
+            };
 
-                <div class="links">
-                </div>
-            </div>
-        </div>
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            myChart.on('click', function (params) {
+                // 控制台打印数据的名称
+                console.log(params.data);
+            });
+        </script>
     </body>
+    
 </html>
