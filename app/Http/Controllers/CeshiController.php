@@ -37,6 +37,30 @@ class CeshiController extends Controller
 
 
 
+    public function list()
+    {
+
+    }
+
+    public function add()
+    {
+
+    }
+
+    public function detail()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function del()
+    {
+
+    }
   
 
 }
